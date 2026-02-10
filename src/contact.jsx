@@ -1,6 +1,6 @@
 import React from "react"
 import { Mail, Phone, MapPin, Instagram, Facebook, MessageCircle } from "lucide-react"
-import "./style/Contact.css"
+import "./style/contact.css"
 
 const Contact = () => {
   return (
@@ -57,7 +57,7 @@ const Contact = () => {
 
         {/* FACEBOOK */}
         <a 
-            href="https://facebook.com/" 
+            href="https://www.facebook.com/almutarjim21?rdid=QGWQ1bVsIjjktlTP&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1CCDQQYEwo%2F#" 
             target="_blank" 
             rel="noopener noreferrer"
             className="contact-item"
