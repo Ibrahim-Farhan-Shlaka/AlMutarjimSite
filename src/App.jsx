@@ -6,7 +6,7 @@ import Navbar from './Navbar'
 import Footer from './Footer'
 import Shop from './Shop'
 import Piece from './Piece'
-import SlideShow from './SlideShow'
+import SlideShow from './Slideshow'
 import List from "./List"
 import WhatsAppButton from "./WhatsappButton"
 import Contact from "./contact"
