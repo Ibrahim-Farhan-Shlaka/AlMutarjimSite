@@ -1,0 +1,207 @@
+:root {
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: fantasy, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  margin: 0;
+  padding: 0;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* variables */
+  --background-color: #f6f6f6;
+  --foreground-color: rgb(121, 3, 218);
+  --primary-text-color: #0a0a0a;
+  --secondary-text-color: #ffffff;
+  --pattern-color: #ffffff12;
+  --toggle-bg: #f0eb9d;
+  --toggle-fg: #474303;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+[data-theme='light'] {
+  --background-color: #f6f6f6;
+  --foreground-color: rgb(121, 3, 218);
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #000000;
+  --pattern-color: #0000002d;
+  --toggle-bg: #f0eb9d;
+  --toggle-fg: #474303;
+}
+
+[data-theme='dark'] {
+  --background-color: #1a1a1a;
+  --foreground-color: rgb(121, 3, 218);
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #ffffff;
+  --pattern-color: #ffffff12;
+  --toggle-bg: #334cdb;
+  --toggle-fg: #12106e;
+}
+
+body {
+  margin: 0;
+  flex: 1;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+  font-family: "Cairo", "Amiri", "Noto Naskh Arabic", sans-serif;
+
+}
+
+.App {
+  margin: 0;
+  padding: 0;
+  padding-top: 5rem;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
+  
+  background-image: radial-gradient(var(--pattern-color) 1px, transparent 1px);
+  background-size: 24px 24px;
+
+  transition: 0.5s;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+
+/* -- TEXTS -- */
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-family:fantasy;
+  float: left;
+  margin-left: 1rem;
+  margin-top: 1.4rem;
+
+  color: var(--primary-text-color);
+  transition: 0.5s;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-family:fantasy;
+  color: var(--secondary-text-color);
+  transition: 0.5s;
+}
+
+h3 {
+  font-size: 2em;
+  font-family:fantasy;
+  color: var(--secondary-text-color);
+  transition: 0.5s;
+}
+
+p {
+  font-family: fantasy;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  color: var(--secondary-text-color);
+}
+
+
+/* -- BUTTONS -- */
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: fantasy;
+  color: var(--secondary-text-color);
+  background-color: var(--background-color);
+  cursor: pointer;
+  transition: border-color 0.25s;
+
+  float: right;
+  margin-top: 1.4rem;
+  margin-right: 1.4rem;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus, button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+#darkButton {
+  color: var(--foreground-color);
+  background-color: var(--background-color);
+  position: fixed;
+  top: 5rem;
+  right: 0.5rem;
+  z-index: 9999;
+  font-weight: bold;
+  padding: 1rem;
+  border: var(--foreground-color) 2px solid;
+
+  transition: 0.2s ease;
+}
+
+#darkButton:hover {
+  background-color: var(--secondary-text-color);
+  border: var(--foreground-color) 2px solid;
+  padding: 1.2rem;
+}
+
+
+/* -- EVENT -- */
+
+.Event {
+  margin-top: 5rem;
+}
+.Event .Card {
+  display: block;
+}
+
+
+/* -- EVENT -- */
+
+#logo {
+    cursor: pointer;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo:hover {animation: logo-spin infinite 20s linear;}
+}
+
+.read-the-docs {
+  color: #888;
+}

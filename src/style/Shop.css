@@ -1,0 +1,43 @@
+.shop-section {
+  position: relative;
+  width: 100%;
+  height: 35rem; /* LIMIT HEIGHT HERE */
+  margin-top: 4rem;
+  margin-bottom: -6rem;
+  border-radius: 0; /* full width */
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+/* Google map full size */
+.shop-map {
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: grayscale(40%) contrast(1.1);
+}
+
+/* Overlay text card */
+.shop-overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
+  padding: 1rem 1.4rem;
+  border-radius: 14px;
+  color: white;
+  z-index: 2;
+}
+
+.shop-overlay h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: white;
+}
+
+.shop-overlay p {
+  margin: 0.4rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}

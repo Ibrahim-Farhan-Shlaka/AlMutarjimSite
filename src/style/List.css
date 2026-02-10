@@ -1,0 +1,67 @@
+.language-section {
+  width: min(90%, 1100px);
+  margin: 4rem auto;
+  padding: 2.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  font-family: "Cairo", "Amiri", "Noto Naskh Arabic", sans-serif;
+}
+
+/* Title */
+.language-title {
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  text-align: center;
+  color: var(--secondary-text-color);
+  font-weight: 600;
+  font-family: "Cairo", "Amiri", "Noto Naskh Arabic", sans-serif;
+}
+
+/* Responsive Grid */
+.language-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 14px;
+}
+
+/* Language Card */
+.language-item {
+  background: var(--foreground-color);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 1.05rem; /* slightly bigger */
+  font-weight: 500;
+  color: var(--primary-text-color);
+  line-height: 1.4; /* more readable for Arabic */
+  transition: 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  direction: rtl; /* ensures Arabic flows right-to-left */
+}
+
+/* Hover */
+.language-item:hover {
+  transform: translateY(-3px);
+  background: var(--background-color);
+  border-color: var(--secondary-text-color);
+}
+
+/* Mobile tweaks */
+@media (max-width: 600px) {
+  .language-section {
+    padding: 1.5rem;
+  }
+
+  .language-title {
+    font-size: 1.6rem;
+  }
+
+  .language-item {
+    font-size: 1.1rem; /* bigger on small screens */
+    padding: 0.8rem;
+  }
+}

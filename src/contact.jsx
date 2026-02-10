@@ -1,0 +1,76 @@
+import React from "react"
+import { Mail, Phone, MapPin, Instagram, Facebook, MessageCircle } from "lucide-react"
+import "./style/Contact.css"
+
+const Contact = () => {
+  return (
+    <section className="contact-card">
+
+      <h2 className="contact-title">تواصل معنا</h2>
+      <div className="contact-divider"></div>
+
+      <div className="contact-grid">
+
+        {/* EMAIL */}
+        <a href="mailto:almutarjim2010@gmail.com" className="contact-item">
+            <Mail size={40} strokeWidth={1.5} />
+            <span>Email</span>
+            <p>almutarjim2010@gmail.com</p>
+        </a>
+
+        {/* PHONE */}
+        <a href="tel:+9647703599943" className="contact-item">
+            <Phone size={40} strokeWidth={1.5} />
+            <span>Phone</span>
+            <p>+964 770 359 9943</p>
+        </a>
+
+        <a href="https://wa.me/9647703599943"  target="_blank" className="contact-item">
+        <MessageCircle size={40} strokeWidth={1.5} />
+        <span>WhatsApp</span>
+        <p>+9647703599943 تواصل معنا</p>
+        </a>
+
+        {/* GOOGLE MAPS */}
+        <a 
+            href="https://maps.app.goo.gl/nLytDEZhFnYaGUXz6" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="contact-item"
+        >
+            <MapPin size={40} strokeWidth={1.5} />
+            <span>Address</span>
+            <p>Baghdad, Karrada, Iraq</p>
+        </a>
+
+        {/* INSTAGRAM */}
+        <a 
+            href="https://www.instagram.com/almutarjimofficeiraq/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="contact-item"
+        >
+            <Instagram size={40} strokeWidth={1.5} />
+            <span>Instagram</span>
+            <p>@almutarjimofficeiraq</p>
+        </a>
+
+        {/* FACEBOOK */}
+        <a 
+            href="https://facebook.com/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="contact-item"
+        >
+            <Facebook size={40} strokeWidth={1.5} />
+            <span>Facebook</span>
+            <p>Al Mutarjim Translation Office</p>
+        </a>
+
+      </div>
+
+    </section>
+  )
+}
+
+export default Contact
