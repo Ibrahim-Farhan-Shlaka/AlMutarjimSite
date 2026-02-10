@@ -23,12 +23,14 @@ const Contact = () => {
             <Phone size={40} strokeWidth={1.5} />
             <span>Phone</span>
             <p>+964 770 359 9943</p>
+            <p>+964 790 172 3025</p>
         </a>
 
         <a href="https://wa.me/9647703599943"  target="_blank" className="contact-item">
         <MessageCircle size={40} strokeWidth={1.5} />
         <span>WhatsApp</span>
         <p>+9647703599943 تواصل معنا</p>
+        <p>+9647901723025  او</p>
         </a>
 
         {/* GOOGLE MAPS */}

@@ -12,10 +12,6 @@ const WhatsappButton = () => {
     >
       <img src="/whatsapp.png" alt="WhatsApp" />
     </a>
-
-    <div className="whatsapp-text">
-      Need translation? Chat with us!
-    </div>
     </>
   )
 }

@@ -53,7 +53,7 @@
 /* Mobile tweaks */
 @media (max-width: 600px) {
   .language-section {
-    padding: 1.5rem;
+    padding: 1rem;
   }
 
   .language-title {

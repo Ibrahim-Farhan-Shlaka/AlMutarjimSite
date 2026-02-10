@@ -32,15 +32,21 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  align-items: stretch; /* 🔥 IMPORTANT */
 }
 
 /* Each contact box */
 .contact-item {
-  background: rgba(0,0,0,0.25);
-  padding: 1.5rem;
-  border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: 0.25s ease;
+  background: rgba(0,0,0,0.35);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; /* 🔥 force equal height */
+  text-align: center;
+  box-sizing: border-box;
+  min-height: 160px;
+  min-width: 50%;
 }
 
 .contact-item:hover {
@@ -63,6 +69,7 @@
   margin: 0;
   font-size: 1.2rem;
   font-weight: 500;
+  word-wrap: break-word;
 }
 
 /* 📱 Mobile responsive */

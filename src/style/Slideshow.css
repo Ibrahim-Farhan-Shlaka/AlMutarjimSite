@@ -74,6 +74,14 @@
 
 
 @media (max-width: 700px) {
+  .slider img {
+    max-height: 30rem;
+  }
+
+  .hero-text {
+    min-width: 90%;
+  }
+
   .hero-text h1 {
     font-size: 1.8rem;
   }

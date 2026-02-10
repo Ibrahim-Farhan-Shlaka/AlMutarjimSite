@@ -1,26 +1,22 @@
 import React from 'react'
 import './style/Piece.css'
 
-const Piece = ({ Big, Medium, ImagePath, align = "center" }) => {
+const Piece = ({ Big, Medium, Image, align = "left" }) => {
   return (
     <section className={`piece-card ${align}`}>
-
       <div className="piece-content">
+        
+        {Image && (
+          <img src={Image} alt="" className="piece-img" />
+        )}
+
         <div className="piece-text">
-          <h2 className="piece-big">{Big}</h2>
+          <h1 className="piece-big">{Big}</h1>
           <div className="piece-divider"></div>
-          <p className="piece-medium">
-            {Medium?.split("\n").map((line, i) => (
-              <span key={i}>{line}<br /></span>
-            ))}
-          </p>
+          <p className="piece-medium">{Medium}</p>
         </div>
 
-        {ImagePath && (
-          <img className="piece-img" src={ImagePath} alt="" />
-        )}
       </div>
-
     </section>
   )
 }
