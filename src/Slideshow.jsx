@@ -1,21 +1,19 @@
 import React from 'react'
 import './style/Slideshow.css'
 
-const Slideshow = () => {
+const Slideshow = ({ language }) => {
   return (
     <div className="slider-wrapper">
 
       <div className="slider">
 
         <div className="slide">
-          <img src="tran3.png" alt="Hero" />
+          <img src="greek.png" alt="Hero" />
 
-          {/* Overlay text */}
           <div className="hero-text">
-            <h1>مرحبًا بكم في مكتب المترجم </h1>
-            <h2>للترجمة القانونية المعتمدة</h2>
-
-            <p>أكثر من 20 عامًا من الخبرة في مجال الترجمة القانونية</p>
+            <h1>{language === "ar" ? "مرحبًا بكم في مكتب المترجم" : "Welcome to Al Mutarjim office"}</h1>
+            <h2> {language === "ar" ? "للترجمة القانونية المعتمدة" : "for legal and authorised translation"}</h2>
+            <p> {language === "ar" ? "مترجمين محترفين ومرخصين" : "authorised and proffesional translators"}</p>
 
           </div>
         </div>

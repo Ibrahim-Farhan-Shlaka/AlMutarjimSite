@@ -38,7 +38,46 @@ function App() {
     "Swedish"
   ]
 
+  const ARlanguages = [
+    "عربي",
+    "انكليزي",
+    "تركي",
+    "فرنسي",
+    "الماني",
+    "اسباني",
+    "ايطالي",
+    "روسي",
+    "صيني",
+    "فارسي",
+    "هولندي",
+    "سويدي"
+  ]
+
   const Services = [
+    "Translation of any legal document into any language",
+    "Immigration expert advice on obtaining citizenship or legal status",
+    "Translation certificates",
+    "Certified translation certificates",
+    "Translation of university and high school admission documents",
+    "High-quality translation of legally binding contracts",
+    "Translation of civil lawsuits and court files",
+
+
+    "Translation of marriage certificates",
+    "Translation of divorce certificates",
+    "Translation of death certificates",
+    "Translation of training certificates",
+    "Translation of academic certificates",
+    "Translation of academic transcripts and records",
+    "Translation of birth certificates",
+
+    "Translation of contracts and agreements",
+    "Translation of litigation documents and court cases",
+    "Translation of legal powers of attorney",
+    "Translation of company incorporation documents",
+  ]
+
+  const ARservices = [
     "ترجمة أي مستند قانوني إلى أي لغة",
     "نصيحة خبير الهجرة بشأن الحصول على الجنسية أو الوضع القانوني",
     "إفادات الترجمة",
@@ -64,51 +103,49 @@ function App() {
   ]
 
   return (
-    <div className='App' data-theme={darkMode ? 'dark' : 'light'}>
-      
-      <Navbar></Navbar>
-
+    <div className='App' data-theme={darkMode ? 'dark' : 'light'} dir={lang === "ar" ? "rtl" : "ltr"}>
       <LangButton currentLang={lang} toggleLang={toggleLang} />
       
-      <SlideShow></SlideShow>
+      <Navbar></Navbar>
+      
+      <SlideShow language={lang}></SlideShow>
 
       <button id='darkButton' onClick={() => setDarkMode(!darkMode)}>{ darkMode ? "🌙" : "☀️"}</button>
 
-      <List Header="اللغات" languages={languages} />
+      <List Header="اللغات" languages={lang === "ar" ? ARlanguages : languages} lang={lang}/>
       
       <Piece 
-        Big="من نحن"
-        Medium="رواد في جودة الترجمة القانونية المعتمدة.
-نقدم خدمات ترجمة قانونية دقيقة ومعترف بها رسميًا لدى الجهات الحكومية والجامعات والمؤسسات القانونية حول العالم. يعمل لدينا فريق مترجمين قانونيين معتمدين بخبرة طويلة لضمان أعلى مستويات الدقة والاحترافية والسرية التامة لجميع الوثائق."
-       ImagePath="tran1.png"
+        Big={lang === "ar" ? "من نحن" : "Who we are"}
+        Medium={lang === "ar" ? "​نحن مكتب ترجمة معتمد متخصص في تقديم الحلول اللغوية المتكاملة.\n\n نجمع بين الخبرة القانونية والاحترافية اللغوية لضمان قبول مستنداتكم لدى كافة الجهات الحكومية، السفارات، والشركات الدولية.\n\n نحن لا نترجم الكلمات فحسب، بل ننقل المعنى القانوني والتقني بكل أمانة.": "We are a certified translation office specializing in providing integrated language solutions. \n\nWe combine legal expertise and linguistic professionalism to ensure your documents are accepted by all government agencies, embassies, and international companies. \n\nWe don't just translate words; we convey the legal and technical meaning with complete fidelity."}
+        ImagePath="./library.jpg"
+        align='right'
+        lang={lang}
       />
 
       <Piece 
-        Big="نبذة عن المكتب"
-        Medium="خدمات ترجمة قانونية فائقة الجودة.يُعد مكتب المترجم القانوني من المكاتب الرائدة في الترجمة المعتمدة، حيث بنى سمعة قوية قائمة على الدقة والاحترافية والالتزام الكامل بالمعايير القانونية. يعمل لدينا فريق من المترجمين القانونيين المعتمدين لتقديم ترجمة متخصصة في المجالات القانونية والإدارية والأكاديمية، مع ضمان السرية التامة وسرعة التنفيذ وأسعار تنافسية للأفراد والمؤسسات.."
-        image="tran2.jpg"
+        Big= {lang === "ar" ? "مخدماتنا الأساسية" : "Our essential services"}
+        Medium={lang === "ar" ? "​الترجمة القانونية المعتمدة: (شهادات الميلاد، عقود الزواج، السجلات التجارية، التوكيلات).\n\n ​ترجمة الأعمال والشركات: (التقارير المالية، الميزانيات، اتفاقيات عدم الإفصاح).\n\n ​الترجمة التقنية والعلمية: (كتيبات التشغيل، الأبحاث الأكاديمية، التقارير الطبية).\n\n ​خدمات القيمة المضافة: (تنسيق الملفات المماثل للأصل , المراجعة اللغوية، المساعدة في إجراءات التصديقات)." : "Certified Legal Translation: (Birth certificates, marriage contracts, commercial registers, powers of attorney, etc.).\n\n Business and Corporate Translation: (Financial reports, balance sheets, non-disclosure agreements, etc.).\n\n Technical and Scientific Translation: (Operating manuals, academic research, medical reports, etc.).\n\n Value-Added Services: (File formatting identical to the original, proofreading, assistance with attestation procedures, etc.)."}
+        ImagePath="./greek.png"
+        lang={lang}
       />
 
       <Piece 
-        Big="مترجم وثائق قانونية"
-        Medium="الترجمة القانونية تتطلب خبرة عالية ومعرفة دقيقة بالمصطلحات القانونية بين الدول. يقوم مترجمونا المختصون بترجمة المستندات القانونية بلغتهم الأم لضمان أعلى درجات الدقة القانونية واللغوية، مع تسليم سريع وأسعار مناسبة."
-        image="legal.jpg"
+        Big={lang === "ar" ? "لماذا يختارنا العملاء؟ ": "Why choose us?"}
+        Medium={lang === "ar" ? 'لاعتماد الرسمي: تراجمنا مقبولة لدى جميع السفارات والجهات الرسمية.\n\n ​السرعة والالتزام: ندرك قيمة الوقت، لذا نلتزم بمواعيد التسليم بدقة متناهية.\n\n ​السرية التامة: نطبق بروتوكولات صارمة لحماية بيانات عملائنا ومستنداتهم.\n\n ​الجودة الثنائية: كل ملف يمر بمرحلتي "ترجمة" ثم "تدقيق" قبل الختم النهائي.': "For official accreditation: Our translations are accepted by all embassies and official bodies. \n\nSpeed ​​and commitment: We understand the value of time, so we adhere to delivery deadlines with utmost precision. \n\nComplete confidentiality: We implement strict protocols to protect our clients' data and documents. \n\nDual quality: Every file goes through two stages: translation and then proofreading before final approval."}
+        ImagePath="./tran1.png"
+        align='right'
+        lang={lang}
       />
 
-      <Piece 
-        Big="الترجمة القانونية المعتمدة"
-        Medium="نقدم جميع أنواع خدمات الترجمة القانونية بأكثر من 100 لغة، بما في ذلك شهادات الميلاد، جوازات السفر، رخص القيادة، العقود، ووثائق المحاكم. جميع الترجمات معتمدة ومقبولة لدى الجهات الرسمية والمؤسسات الحكومية."
-      />
+      <List Header={lang === "ar" ? "خدماتنا" : "Our services"} languages={lang === "ar" ? ARservices : Services} lang={lang}/>
 
-      <List Header="خدماتنا" languages={Services} />
+      <Contact lang={lang}></Contact>
 
-      <Contact></Contact>
+      <Shop Name={lang === "ar" ? "موقعنا" : "Location"}/>
 
-      <Shop Name='Our shop'/>
+      <Footer lang={lang}/>
 
-      <Footer/>
-
-      <WhatsAppButton /> {/* Always floating */}
+      <WhatsAppButton />
 
     </div>
   )

@@ -47,6 +47,7 @@
 .language-item:hover {
   transform: translateY(-3px);
   background: var(--background-color);
+  color: var(--secondary-text-color);
   border-color: var(--secondary-text-color);
 }
 
