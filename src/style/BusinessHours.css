@@ -1,0 +1,71 @@
+.hours-card {
+  max-width: 80%;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 18px;
+  background: rgba(221, 107, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgb(196, 2, 255);
+  box-shadow: 0 10px 40px rgba(89, 0, 172, 0.25);
+  text-align: center;
+}
+
+/* Status title */
+.hours-status {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.hours-status.open-now { color: #4ade80; }
+.hours-status.closing-soon { color: #facc15; }
+.hours-status.closed { color: #ef4444; }
+
+.hours-countdown {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+/* Days list */
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  background: var(--background-color);
+  border: 1px solid rgba(119, 0, 255, 0.393);
+}
+
+.day-name {
+  font-weight: 600;
+  color: var(--secondary-text-color);
+}
+
+.day-time {
+  font-weight: 500;
+  opacity: 0.9;
+  color: var(--secondary-text-color);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .hours-card {
+    max-width: 95%;
+    padding: 1.3rem;
+  }
+
+  .hours-status {
+    font-size: 1.6rem;
+  }
+
+  .hours-row {
+    font-size: 0.95rem;
+  }
+}

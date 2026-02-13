@@ -8,7 +8,9 @@ const Slideshow = ({ language }) => {
       <div className="slider">
 
         <div className="slide">
-          <img src="greek.png" alt="Hero" />
+          <img src="8.jfif" alt="Hero" />
+          <img src="9.jfif" alt="Hero" />
+          <img src="7.jfif" alt="Hero" />
 
           <div className="hero-text">
             <h1>{language === "ar" ? "مرحبًا بكم في مكتب المترجم" : "Welcome to Al Mutarjim office"}</h1>

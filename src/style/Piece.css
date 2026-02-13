@@ -5,17 +5,21 @@
   background: rgba(255,255,255,0.04);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 12px 45px rgba(0,0,0,0.35);
+  box-shadow: 0 12px 45px rgba(89, 0, 172, 0.25);
   padding: 0;
   overflow: hidden;
 }
 
 /* Layout container */
 .piece-content {
-  display: flex;
   gap: 2rem;
   align-items: stretch; /* makes image match text height */
   padding: 2.2rem;
+
+  vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
 }
 
 /* Text block */
@@ -89,10 +93,12 @@ html[lang="ar"] .piece-text {
   }
 
   .piece-img {
-    display: none;
+    width: 100%;
   }
 
   .piece-text {
     width: 100%;
+    float: block;
   }
+
 }
