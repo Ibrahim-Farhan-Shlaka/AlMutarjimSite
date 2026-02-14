@@ -106,7 +106,7 @@ function App() {
   ]
 
   return (
-    <div className='App' data-theme={darkMode ? 'dark' : 'light'} dir={lang === "ar" ? "rtl" : "ltr"}>
+    <div className='App' data-theme={darkMode ? 'dark' : 'light'} >
       
       <Navbar language={lang} toggleLang={toggleLang}></Navbar>
       

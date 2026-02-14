@@ -5,7 +5,7 @@ import "./style/MobileCTA.css"
 const MobileCTA = ({ lang }) => {
   const t = {
     call: lang === "ar" ? "اتصل الآن" : "Call Now",
-    whatsapp: lang === "ar" ? "أرسل عبر واتساب" : "Send Documents on WhatsApp",
+    whatsapp: lang === "ar" ? "أرسل عبر واتساب" : "Contact on WhatsApp",
     review: lang === "ar" ? "رأيكم بخدماتنا" : "Review Us!"
   }
 
