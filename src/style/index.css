@@ -153,6 +153,7 @@ button:focus, button:focus-visible {
   font-weight: bold;
   padding: 1rem;
   border: var(--foreground-color) 2px solid;
+  border-radius: 50%;
 
   transition: 0.2s ease;
 }
@@ -208,7 +209,8 @@ button:focus, button:focus-visible {
 
 @media (max-width: 700px) {
   #darkButton {
-    top: 2rem;
+    top: -1.1rem;
     right: -1rem;
+    padding: 0.5rem;
   }
 }
