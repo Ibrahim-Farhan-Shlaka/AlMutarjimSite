@@ -68,7 +68,7 @@ const BusinessHours = ({ language = "en" }) => {
   const t = {
     Open: language === "ar" ? "مفتوح الآن" : "Open Now",
     "Closing Soon": language === "ar" ? "سيغلق قريبًا" : "Closing Soon",
-    Closed: language === "ar" ? " يوم استراحة " : "Closed"
+    Closed: language === "ar" ? "استراحة" : "Closed"
   }
 
   return (
