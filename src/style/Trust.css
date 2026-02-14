@@ -1,8 +1,8 @@
 .trust-card {
   max-width: 85%;
-  margin: 0rem auto;
+  margin: -2rem auto;
   padding: 1rem;
-  border-radius: 20px;
+  border-radius: 10px;
   background: rgba(255,255,255,0.05);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255,255,255,0.1);
@@ -11,31 +11,30 @@
 }
 
 .trust-card h2 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 800;
   color: var(--secondary-text-color);
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
 }
 
 /* Grid */
 .trust-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 /* Each trust item */
 .trust-item {
-  background: rgba(0,0,0,0.35);
-  padding: 1.5rem;
+  padding: 0.5rem;
   border-radius: 14px;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid var(--secondary-text-color);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.8rem;
+  gap: 0rem;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 0.75rem;
   transition: 0.25s ease;
 }
 
@@ -46,7 +45,7 @@
 
 /* Icons */
 .trust-item svg {
-  color: var(--accent-color);
+  color: var(--secondary-text-color);
 }
 
 /* Arabic alignment */

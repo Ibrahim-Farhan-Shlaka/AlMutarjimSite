@@ -20,7 +20,7 @@
 /* Overlay text */
 .hero-text {
   position: absolute;
-  top: 70%; /* more vertical space above */
+  top: 60%; /* more vertical space above */
   left: 50%;
   width: 100%;
   transform: translate(-50%, -50%);
@@ -29,15 +29,14 @@
   border-radius: 16px;
   color: white;
   text-align: center;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(2px);
   max-width: 80%;
 }
 
 /* Text styles */
 .hero-text h1 {
   font-size: 3.2rem;
-  color: #d073ff;
-  text-shadow: 0 0 12px #d073ff;
+  color: white;
 }
 
 .hero-text h2 {

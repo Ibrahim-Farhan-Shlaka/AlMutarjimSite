@@ -13,12 +13,12 @@ const MobileCTA = ({ lang }) => {
     <div className="mobile-cta">
       <a className="cta-call" href="tel:+9647703599943">
         <FaPhoneAlt />
-        {t.call}
+        {/*{t.call}*/}
       </a>
 
       <a className="cta-review" href="https://maps.app.goo.gl/vEkaRWEMKq6uAMsF8">
         <FaMap/>
-        {t.review}
+        {/*{t.review}*/}
       </a>
 
       <a
@@ -28,7 +28,7 @@ const MobileCTA = ({ lang }) => {
         rel="noopener noreferrer"
       >
         <FaWhatsapp />
-        {t.whatsapp}
+        {/*{t.whatsapp}*/}
       </a>
     </div>
   )

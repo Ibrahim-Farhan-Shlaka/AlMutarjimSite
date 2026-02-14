@@ -2,19 +2,12 @@
   max-width: 85%;
   margin: 4rem auto;
   padding: 2.5rem;
-  border-radius: 20px;
-  /*background: rgba(255,255,255,0.06);*/
-  /*backdrop-filter: blur(12px);*/
+  border-radius: 10px;
   border: 1px solid rgba(255,255,255,0.12);
   box-shadow: 0 10px 40px rgba(0,0,0,0.35);
   text-align: center;
   background-color: var(--background-color);
   opacity: 0.8;
-  background: radial-gradient(circle, transparent 20%, var(--background-color) 20%, var(--background-color) 80%, transparent 80%, transparent), 
-              radial-gradient(circle, transparent 20%, var(--background-color) 20%, var(--background-color) 80%, transparent 80%, transparent) 25px 25px, 
-              linear-gradient(#444df745 2px, transparent 2px) 0 -1px, 
-              linear-gradient(90deg, #444df73e 2px, var(--background-color) 2px) -1px 0;
-  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
 }
 
 /* Title */

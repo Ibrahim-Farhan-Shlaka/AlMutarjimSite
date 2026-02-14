@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import "./style/Slideshow.css"
 
-const images = ["8.jfif", "9.jfif", "7.jfif"]
+const images = ["main.jpg", "9Copy.jpg", "7Copy.jpg"]
 
 const Slideshow = ({ lang }) => {
   const [index, setIndex] = useState(0)

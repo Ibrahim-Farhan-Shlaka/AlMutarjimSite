@@ -18,7 +18,7 @@
   --foreground-color: rgb(121, 3, 218);
   --primary-text-color: #0a0a0a;
   --secondary-text-color: #ffffff;
-  --pattern-color: #ffffff12;
+  --pattern-color: #00000012;
   --toggle-bg: #f0eb9d;
   --toggle-fg: #474303;
 }
@@ -32,7 +32,7 @@
   --foreground-color: rgb(121, 3, 218);
   --primary-text-color: #ffffff;
   --secondary-text-color: #000000;
-  --pattern-color: #0000002d;
+  --pattern-color: #ffffff2d;
   --toggle-bg: #f0eb9d;
   --toggle-fg: #474303;
 }
@@ -67,7 +67,7 @@ body {
   background-color: var(--background-color);
   
   background-image: radial-gradient(var(--pattern-color) 1px, transparent 1px);
-  background-size: 24px 24px;
+  background-size: 12px 12px;
 
   transition: 0.5s;
 }
@@ -209,7 +209,7 @@ button:focus, button:focus-visible {
 
 @media (max-width: 700px) {
   #darkButton {
-    top: -1.1rem;
+    top: -0.8rem;
     right: -1rem;
     padding: 0.5rem;
   }

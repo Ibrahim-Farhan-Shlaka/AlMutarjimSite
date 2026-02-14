@@ -4,11 +4,11 @@
   width: 100%;
   height: 5rem;
 
-  background: rgba(70, 0, 123, 0.4);
+  background: #1a0033c5;
   backdrop-filter: blur(10px);
 
   background-image: radial-gradient(var(--pattern-color) 1px, transparent 1px);
-  background-size: 24px 24px;
+  background-size: 12px 12px;
 
   display: flex;
   align-items: center;
@@ -123,7 +123,7 @@
   }
 
   .navbar {
-    height: 3rem;
+    height: 3.5rem;
   }
 
   .nav-logo {
