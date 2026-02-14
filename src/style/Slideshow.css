@@ -20,7 +20,7 @@
 /* Overlay text */
 .hero-text {
   position: absolute;
-  top: 55%; /* more vertical space above */
+  top: 70%; /* more vertical space above */
   left: 50%;
   width: 100%;
   transform: translate(-50%, -50%);

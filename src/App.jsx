@@ -125,11 +125,11 @@ function App() {
         Medium={lang === "ar" ? "​نحن مكتب ترجمة معتمد متخصص في تقديم الحلول اللغوية المتكاملة.\n نجمع بين الخبرة القانونية والاحترافية اللغوية لضمان قبول مستنداتكم لدى كافة الجهات الحكومية، السفارات، والشركات الدولية.\n نحن لا نترجم الكلمات فحسب، بل ننقل المعنى القانوني والتقني بكل أمانة.": "We are a certified translation office specializing in providing integrated language solutions. \n\nWe combine legal expertise and linguistic professionalism to ensure your documents are accepted by all government agencies, embassies, and international companies. \n\nWe don't just translate words; we convey the legal and technical meaning with complete fidelity."}
         ImagePath="./1.jfif"
         align='right'
-        lang={lang}
+        lang={lang} 
       />
 
       <Piece 
-        Big= {lang === "ar" ? "مخدماتنا الأساسية" : "Our essential services"}
+        Big= {lang === "ar" ? "خدماتنا الأساسية" : "Our essential services"}
         Medium={lang === "ar" ? "​الترجمة القانونية المعتمدة: (شهادات الميلاد، عقود الزواج، السجلات التجارية، التوكيلات).\n ​ترجمة الأعمال والشركات: (التقارير المالية، الميزانيات، اتفاقيات عدم الإفصاح).\n ​الترجمة التقنية والعلمية: (كتيبات التشغيل، الأبحاث الأكاديمية، التقارير الطبية).\n ​خدمات القيمة المضافة: (تنسيق الملفات المماثل للأصل , المراجعة اللغوية، المساعدة في إجراءات التصديقات)." : "Certified Legal Translation: (Birth certificates, marriage contracts, commercial registers, powers of attorney, etc.).\n Business and Corporate Translation: (Financial reports, balance sheets, non-disclosure agreements, etc.).\n Technical and Scientific Translation: (Operating manuals, academic research, medical reports, etc.).\n Value-Added Services: (File formatting identical to the original, proofreading, assistance with attestation procedures, etc.)."}
         ImagePath="./3.jfif"
         lang={lang}
