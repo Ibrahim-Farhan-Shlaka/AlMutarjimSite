@@ -1,25 +1,38 @@
 .lang-button {
-  position: fixed;
-  top: 5rem;
-  left: 1rem;
-  background: rgba(0, 0, 0, 0.713);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
-  padding: 0.6rem 1rem;
-  border-radius: 999px; /* pill shape */
-  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.566);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.15);
+
+  padding: 0.35rem 0.8rem;
+  border-radius: 8px;
+
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--primary-text-color);
+
   cursor: pointer;
-  z-index: 200;
-  transition: 0.25s ease;
+  transition: 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
+/* Hover effect */
 .lang-button:hover {
-  background: rgba(255,255,255,0.15);
-  transform: translateY(-2px);
+  background: rgba(255,255,255,0.18);
+  transform: translateY(-1px);
 }
 
+/* Click */
 .lang-button:active {
-  transform: translateY(1px);
+  transform: scale(0.96);
+}
+
+@media (max-width: 900px) {
+  .lang-button {
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+    margin-top: 0.27rem;
+    margin-right: -0.7rem;
+  }
 }

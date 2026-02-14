@@ -1,0 +1,67 @@
+.trust-card {
+  max-width: 85%;
+  margin: 4rem auto;
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+  text-align: center;
+}
+
+.trust-card h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--secondary-text-color);
+  margin-bottom: 2rem;
+}
+
+/* Grid */
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* Each trust item */
+.trust-item {
+  background: rgba(0,0,0,0.35);
+  padding: 1.5rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: 0.25s ease;
+}
+
+.trust-item:hover {
+  transform: translateY(-5px);
+  background: rgba(0,0,0,0.45);
+}
+
+/* Icons */
+.trust-item svg {
+  color: var(--accent-color);
+}
+
+/* Arabic alignment */
+html[lang="ar"] .trust-item p {
+  direction: rtl;
+  text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .trust-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .trust-card h2 {
+    font-size: 1.8rem;
+  }
+}

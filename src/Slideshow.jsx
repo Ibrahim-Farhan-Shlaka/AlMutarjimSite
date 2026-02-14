@@ -17,6 +17,22 @@ const Slideshow = ({ language }) => {
             <h2> {language === "ar" ? "للترجمة القانونية المعتمدة" : "for legal and authorised translation"}</h2>
             <p> {language === "ar" ? "مترجمين محترفين ومرخصين" : "authorised and proffesional translators"}</p>
 
+
+          <div className="hero-buttons">
+            <a
+              href="https://wa.me/9647700000000?text=اتصل بالمترجم"
+              target="_blank"
+              className="hero-btn whatsapp"
+            >
+              💬 أرسل مستند عبر واتساب
+            </a>
+
+            <a href="tel:+9647700000000" className="hero-btn call">
+              📞 اتصل بالمترجم
+            </a>
+            
+          </div>
+
           </div>
         </div>
 

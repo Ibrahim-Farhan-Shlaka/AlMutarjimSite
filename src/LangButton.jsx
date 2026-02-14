@@ -1,10 +1,10 @@
 import React from "react";
 import "./style/LangButton.css";
 
-const LangButton = ({ currentLang, toggleLang }) => {
+const LangButton = ({ lang, toggleLang }) => {
   return (
     <button className="lang-button" onClick={toggleLang}>
-      {currentLang === "ar" ? "English" : "العربية"}
+      {lang === "ar" ? "English" : "العربية"}
     </button>
   );
 };

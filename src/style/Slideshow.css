@@ -14,7 +14,7 @@
 /* Full width hero image */
 .slider img {
     width: 33%;
-    height: 90vh; /* hero height */
+    height: 40rem; /* hero height */
     object-fit: cover;
 }
 
@@ -36,9 +36,11 @@
 
 /* Main title */
 .hero-text h1 {
-  font-size: 4.5rem;
+  font-size: 6rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: #d073ff;
+  text-shadow: 0px 0px 5px #d073ff;
 }
 
 /* Subtitle */
@@ -71,18 +73,54 @@
 }
 
 
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  padding: 0.9rem 1.6rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.25s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* WhatsApp */
+.hero-btn.whatsapp {
+  background: #25D366;
+  color: black;
+  margin: auto;
+}
+
+/* Call */
+.hero-btn.call {
+  background: #2563eb;
+  color: white;
+  margin: auto;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+}
+
 
 @media (max-width: 700px) {
   .slider img {
-    max-height: 30rem;
+    max-height: 35rem;
   }
 
   .hero-text {
     min-width: 90%;
+    top: 55%;
   }
 
   .hero-text h1 {
-    font-size: 1.8rem;
+    font-size: 3rem;
   }
 
   .hero-text h2 {

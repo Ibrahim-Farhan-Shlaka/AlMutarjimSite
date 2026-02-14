@@ -1,0 +1,59 @@
+.mobile-cta {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  z-index: 9999;
+  box-shadow: 0 -10px 25px rgba(0,0,0,0.4);
+}
+
+/* Shared button styles */
+.mobile-cta a {
+  flex: 1;
+  padding: 0rem 1rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  backdrop-filter: blur(10px);
+  transition: 0.2s ease;
+}
+
+/* Call button */
+.cta-call {
+  background: linear-gradient(0deg, #6366f1, #8b5cf6);
+}
+
+/* WhatsApp button */
+.cta-whatsapp {
+  background: linear-gradient(0deg, #128C7E,  #25D366);
+  animation: pulse 2s infinite;
+}
+
+/* WhatsApp button */
+.cta-review {
+  background: linear-gradient(0deg, #ff7c30, #ffde24);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
+  70% { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
+/* Hover effect */
+.mobile-cta a:hover {
+  transform: translateY(-2px);
+}
+
+/* Mobile only */
+@media (min-width: 900px) {
+  .mobile-cta {
+    display: none;
+  }
+}

@@ -4,9 +4,9 @@ import "./style/contact.css"
 
 const Contact = ({ lang }) => {
   return (
-    <section className="contact-card">
+    <section className="contact-card" dir="ltr">
 
-      <h2 className="contact-title">{lang === "ar" ? "تواصل معنل" : "Contact us"}</h2>
+      <h2 className="contact-title">{lang === "ar" ? "تواصل معنا" : "Contact us"}</h2>
       <div className="contact-divider"></div>
 
       <div className="contact-grid">

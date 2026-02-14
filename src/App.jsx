@@ -12,13 +12,15 @@ import WhatsAppButton from "./WhatsappButton"
 import Contact from "./contact"
 import LangButton from "./LangButton";
 import BusinessHours from './BusinessHours'
+import MobileCTA from './MobileCTA'
+import Trust from './Trust'
 
 function App() {
 
   const [darkMode, setDarkMode] = useState(false);
   const [buttonText, setButtonText] = useState("☀️");
 
-  const [lang, setLang] = useState("ar"); // default Arabic
+  const [lang, setLang] = useState("ar");
 
   const toggleLang = () => {
     setLang(prev => (prev === "ar" ? "en" : "ar"));
@@ -105,13 +107,14 @@ function App() {
 
   return (
     <div className='App' data-theme={darkMode ? 'dark' : 'light'} dir={lang === "ar" ? "rtl" : "ltr"}>
-      <LangButton currentLang={lang} toggleLang={toggleLang} />
       
-      <Navbar></Navbar>
+      <Navbar language={lang} toggleLang={toggleLang}></Navbar>
       
       <SlideShow language={lang}></SlideShow>
 
       <BusinessHours language={lang} />
+
+      <Trust lang={lang}></Trust>
 
       <button id='darkButton' onClick={() => setDarkMode(!darkMode)}>{ darkMode ? "🌙" : "☀️"}</button>
 
@@ -119,7 +122,7 @@ function App() {
       
       <Piece 
         Big={lang === "ar" ? "من نحن" : "Who we are"}
-        Medium={lang === "ar" ? "​نحن مكتب ترجمة معتمد متخصص في تقديم الحلول اللغوية المتكاملة.\n\n نجمع بين الخبرة القانونية والاحترافية اللغوية لضمان قبول مستنداتكم لدى كافة الجهات الحكومية، السفارات، والشركات الدولية.\n\n نحن لا نترجم الكلمات فحسب، بل ننقل المعنى القانوني والتقني بكل أمانة.": "We are a certified translation office specializing in providing integrated language solutions. \n\nWe combine legal expertise and linguistic professionalism to ensure your documents are accepted by all government agencies, embassies, and international companies. \n\nWe don't just translate words; we convey the legal and technical meaning with complete fidelity."}
+        Medium={lang === "ar" ? "​نحن مكتب ترجمة معتمد متخصص في تقديم الحلول اللغوية المتكاملة.\n نجمع بين الخبرة القانونية والاحترافية اللغوية لضمان قبول مستنداتكم لدى كافة الجهات الحكومية، السفارات، والشركات الدولية.\n نحن لا نترجم الكلمات فحسب، بل ننقل المعنى القانوني والتقني بكل أمانة.": "We are a certified translation office specializing in providing integrated language solutions. \n\nWe combine legal expertise and linguistic professionalism to ensure your documents are accepted by all government agencies, embassies, and international companies. \n\nWe don't just translate words; we convey the legal and technical meaning with complete fidelity."}
         ImagePath="./1.jfif"
         align='right'
         lang={lang}
@@ -127,14 +130,14 @@ function App() {
 
       <Piece 
         Big= {lang === "ar" ? "مخدماتنا الأساسية" : "Our essential services"}
-        Medium={lang === "ar" ? "​الترجمة القانونية المعتمدة: (شهادات الميلاد، عقود الزواج، السجلات التجارية، التوكيلات).\n\n ​ترجمة الأعمال والشركات: (التقارير المالية، الميزانيات، اتفاقيات عدم الإفصاح).\n\n ​الترجمة التقنية والعلمية: (كتيبات التشغيل، الأبحاث الأكاديمية، التقارير الطبية).\n\n ​خدمات القيمة المضافة: (تنسيق الملفات المماثل للأصل , المراجعة اللغوية، المساعدة في إجراءات التصديقات)." : "Certified Legal Translation: (Birth certificates, marriage contracts, commercial registers, powers of attorney, etc.).\n\n Business and Corporate Translation: (Financial reports, balance sheets, non-disclosure agreements, etc.).\n\n Technical and Scientific Translation: (Operating manuals, academic research, medical reports, etc.).\n\n Value-Added Services: (File formatting identical to the original, proofreading, assistance with attestation procedures, etc.)."}
+        Medium={lang === "ar" ? "​الترجمة القانونية المعتمدة: (شهادات الميلاد، عقود الزواج، السجلات التجارية، التوكيلات).\n ​ترجمة الأعمال والشركات: (التقارير المالية، الميزانيات، اتفاقيات عدم الإفصاح).\n ​الترجمة التقنية والعلمية: (كتيبات التشغيل، الأبحاث الأكاديمية، التقارير الطبية).\n ​خدمات القيمة المضافة: (تنسيق الملفات المماثل للأصل , المراجعة اللغوية، المساعدة في إجراءات التصديقات)." : "Certified Legal Translation: (Birth certificates, marriage contracts, commercial registers, powers of attorney, etc.).\n Business and Corporate Translation: (Financial reports, balance sheets, non-disclosure agreements, etc.).\n Technical and Scientific Translation: (Operating manuals, academic research, medical reports, etc.).\n Value-Added Services: (File formatting identical to the original, proofreading, assistance with attestation procedures, etc.)."}
         ImagePath="./3.jfif"
         lang={lang}
       />
 
       <Piece 
         Big={lang === "ar" ? "لماذا يختارنا العملاء؟ ": "Why choose us?"}
-        Medium={lang === "ar" ? 'لاعتماد الرسمي: تراجمنا مقبولة لدى جميع السفارات والجهات الرسمية.\n\n ​السرعة والالتزام: ندرك قيمة الوقت، لذا نلتزم بمواعيد التسليم بدقة متناهية.\n\n ​السرية التامة: نطبق بروتوكولات صارمة لحماية بيانات عملائنا ومستنداتهم.\n\n ​الجودة الثنائية: كل ملف يمر بمرحلتي "ترجمة" ثم "تدقيق" قبل الختم النهائي.': "For official accreditation: Our translations are accepted by all embassies and official bodies. \n\nSpeed ​​and commitment: We understand the value of time, so we adhere to delivery deadlines with utmost precision. \n\nComplete confidentiality: We implement strict protocols to protect our clients' data and documents. \n\nDual quality: Every file goes through two stages: translation and then proofreading before final approval."}
+        Medium={lang === "ar" ? 'لاعتماد الرسمي: تراجمنا مقبولة لدى جميع السفارات والجهات الرسمية.\n ​السرعة والالتزام: ندرك قيمة الوقت، لذا نلتزم بمواعيد التسليم بدقة متناهية.\n ​السرية التامة: نطبق بروتوكولات صارمة لحماية بيانات عملائنا ومستنداتهم.\n ​الجودة الثنائية: كل ملف يمر بمرحلتي "ترجمة" ثم "تدقيق" قبل الختم النهائي.': "For official accreditation: Our translations are accepted by all embassies and official bodies. \n\nSpeed ​​and commitment: We understand the value of time, so we adhere to delivery deadlines with utmost precision. \n\nComplete confidentiality: We implement strict protocols to protect our clients' data and documents. \n\nDual quality: Every file goes through two stages: translation and then proofreading before final approval."}
         ImagePath="./2.jfif"
         align='right'
         lang={lang}
@@ -148,7 +151,7 @@ function App() {
 
       <Footer lang={lang}/>
 
-      <WhatsAppButton />
+      <MobileCTA lang={lang}></MobileCTA>
 
     </div>
   )

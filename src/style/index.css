@@ -205,3 +205,10 @@ button:focus, button:focus-visible {
 .read-the-docs {
   color: #888;
 }
+
+@media (max-width: 700px) {
+  #darkButton {
+    top: 2rem;
+    right: -1rem;
+  }
+}

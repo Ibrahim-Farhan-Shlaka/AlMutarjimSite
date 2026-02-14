@@ -62,8 +62,8 @@
 
 /* Image: square and tall */
 .piece-img {
-  width: 320px;
-  aspect-ratio: 1 / 1; /* forces square */
+  width: 25%;
+  aspect-ratio: 1/1; /* forces square */
   border-radius: 16px;
   object-fit: cover;
   box-shadow: 0 12px 30px rgba(0,0,0,0.45);
