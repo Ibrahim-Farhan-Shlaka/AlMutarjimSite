@@ -110,7 +110,7 @@ function App() {
       
       <Navbar language={lang} toggleLang={toggleLang}></Navbar>
       
-      <SlideShow language={lang}></SlideShow>
+      <SlideShow lang={lang}></SlideShow>
 
       <BusinessHours language={lang} />
 
