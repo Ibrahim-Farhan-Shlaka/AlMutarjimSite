@@ -107,34 +107,56 @@ function App() {
 
   const servicesData = [
     {
-      title: "Certificates",
+      title: { en: "Certificates", ar: "الشهادات" },
       items: [
-        { name: "Birth Certificate", image: "/docs/birth.jpg" },
-        { name: "Marriage Certificate", image: "/docs/marriage.jpg" },
-        { name: "Academic Certificate", image: "/docs/academic.jpg" },
+        { name: { en: "Birth Certificate", ar: "شهادة ميلاد" }, image: "/docs/birth.jpg" },
+        { name: { en: "Marriage Certificate", ar: "شهادة زواج" }, image: "/docs/marriage.jpg" },
+        { name: { en: "Divorce Certificate", ar: "شهادة طلاق" }, image: "/docs/divorce.jpg" },
+        { name: { en: "Death Certificate", ar: "شهادة وفاة" }, image: "/docs/death.jpg" },
+        { name: { en: "Academic Certificate", ar: "شهادة دراسية" }, image: "/docs/academic.jpg" },
+        { name: { en: "Diploma Certificate", ar: "شهادة دبلوم" }, image: "/docs/diploma.jpg" }
       ]
     },
+
     {
-      title: "Legal Documents",
+      title: { en: "Legal Documents", ar: "المستندات القانونية" },
       items: [
-        { name: "Contracts", image: "/docs/contract.jpg" },
-        { name: "Court Documents", image: "/docs/court.jpg" },
+        { name: { en: "Contracts", ar: "العقود" }, image: "/docs/contract.jpg" },
+        { name: { en: "Court Documents", ar: "وثائق المحاكم" }, image: "/docs/court.jpg" },
+        { name: { en: "Power of Attorney", ar: "الوكالات القانونية" }, image: "/docs/poa.jpg" },
+        { name: { en: "Affidavits", ar: "الإقرارات القانونية" }, image: "/docs/affidavit.jpg" }
       ]
     },
+
     {
-      title: "Commercial Documents",
+      title: { en: "Commercial Documents", ar: "المستندات التجارية" },
       items: [
-        { name: "Invoices", image: "/docs/invoice.jpg" },
-        { name: "Company Registration", image: "/docs/company.jpg" },
+        { name: { en: "Invoices", ar: "الفواتير" }, image: "/docs/invoice.jpg" },
+        { name: { en: "Company Registration", ar: "تسجيل الشركات" }, image: "/docs/company.jpg" },
+        { name: { en: "Business Licenses", ar: "رخص تجارية" }, image: "/docs/license.jpg" },
+        { name: { en: "Financial Reports", ar: "تقارير مالية" }, image: "/docs/finance.jpg" }
       ]
     },
+
     {
-      title: "Medical Documents",
+      title: { en: "Medical Documents", ar: "المستندات الطبية" },
       items: [
-        { name: "Medical Reports", image: "/docs/medical.jpg" },
+        { name: { en: "Medical Reports", ar: "تقارير طبية" }, image: "/docs/medical.jpg" },
+        { name: { en: "Prescriptions", ar: "الوصفات الطبية" }, image: "/docs/prescription.jpg" },
+        { name: { en: "Hospital Records", ar: "سجلات المستشفيات" }, image: "/docs/hospital.jpg" }
+      ]
+    },
+
+    {
+      title: { en: "Immigration Documents", ar: "وثائق الهجرة" },
+      items: [
+        { name: { en: "Visa Documents", ar: "وثائق التأشيرة" }, image: "/docs/visa.jpg" },
+        { name: { en: "Residency Papers", ar: "أوراق الإقامة" }, image: "/docs/residency.jpg" },
+        { name: { en: "Passport Documents", ar: "وثائق جواز السفر" }, image: "/docs/passport.jpg" }
       ]
     }
   ]
+
 
 
   return (
@@ -147,6 +169,8 @@ function App() {
       <BusinessHours language={lang} />
 
       <Trust lang={lang}></Trust>
+
+      <ServicesList Header={lang === "ar" ? "خدماتنا الأساسية" : "Our translation Services"} data={servicesData} lang={lang}></ServicesList>
 
       <button id='darkButton' onClick={() => setDarkMode(!darkMode)}>{ darkMode ? "🌙" : "☀️"}</button>
 
@@ -176,8 +200,6 @@ function App() {
       />
 
       {/*<List Header={lang === "ar" ? "خدماتنا" : "Our services"} languages={lang === "ar" ? ARservices : Services} lang={lang}/>*/}
-      <List Header={lang === "ar" ? "خدماتنا" : "Our services"} languages={lang === "ar" ? ARservices : Services} lang={lang}/>
-      {/*<ServicesList Header="Our Translation Services" data={servicesData}></ServicesList>*/}
 
       <Contact lang={lang}></Contact>
 

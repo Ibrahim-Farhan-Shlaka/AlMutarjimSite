@@ -2,7 +2,8 @@ import React, { useState } from "react"
 import { FaChevronDown, FaChevronUp } from "react-icons/fa"
 import "./style/ServicesList.css"
 
-const ServicesList = ({ Header, data }) => {
+const ServicesList = ({ Header, data, lang }) => {
+
   const [openCategory, setOpenCategory] = useState(null)
   const [openSub, setOpenSub] = useState(null)
 
@@ -19,7 +20,7 @@ const ServicesList = ({ Header, data }) => {
               className="category-header"
               onClick={() => setOpenCategory(openCategory === i ? null : i)}
             >
-              <span>{i + 1}. {cat.title}</span>
+              <span>{i + 1}. {cat.title[lang]}</span>
               {openCategory === i ? <FaChevronUp /> : <FaChevronDown />}
             </button>
 
@@ -35,16 +36,29 @@ const ServicesList = ({ Header, data }) => {
                         setOpenSub(openSub === `${i}-${j}` ? null : `${i}-${j}`)
                       }
                     >
-                      {sub.name}
+                      {sub.name[lang]}
                       {openSub === `${i}-${j}` ? <FaChevronUp /> : <FaChevronDown />}
                     </button>
 
                     {/* Image Preview */}
                     {openSub === `${i}-${j}` && (
-                      <div className="doc-preview">
-                        <img src={sub.image} alt={sub.name} />
-                      </div>
-                    )}
+                    <div className="doc-preview">
+                      <img src={sub.image} alt={sub.name[lang]} />
+
+                      <a
+                        className="translate-btn"
+                        href={`https://wa.me/9647703599943?text=${encodeURIComponent(
+                          lang === "ar"
+                            ? `مرحباً، أريد ترجمة: ${sub.name.ar}`
+                            : `Hello, I want to translate: ${sub.name.en}`
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {lang === "ar" ? "📩 أرسل للترجمة" : "📩 Send for Translation"}
+                      </a>
+                    </div>
+                  )}
 
                   </div>
                 ))}
