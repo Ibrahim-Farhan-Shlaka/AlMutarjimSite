@@ -29,7 +29,7 @@ const Slideshow = ({ lang }) => {
               target="_blank"
               className="hero-btn whatsapp"
             >
-              {lang === "ar" ? "💬 أرسل مستند عبر واتساب" : "Send documents via whatsapp 💬"}
+              {lang === "ar" ? "💬+9647703599943 أرسل مستند عبر واتساب" : "Send documents via whatsapp +9647703599943💬"}
             </a>
 
             <a href="tel:+9647703599943" className="hero-btn call">

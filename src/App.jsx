@@ -165,17 +165,17 @@ function App() {
       <Navbar language={lang} toggleLang={toggleLang}></Navbar>
       
       <SlideShow lang={lang}></SlideShow>
-
-      <BusinessHours language={lang} />
-
+      
       <Trust lang={lang}></Trust>
-
+      
       <ServicesList Header={lang === "ar" ? "خدماتنا الأساسية" : "Our translation Services"} data={servicesData} lang={lang}></ServicesList>
-
-      <button id='darkButton' onClick={() => setDarkMode(!darkMode)}>{ darkMode ? "🌙" : "☀️"}</button>
 
       <List Header={lang === "ar" ? "اللغات":"Languages"} languages={lang === "ar" ? ARlanguages : languages} lang={lang}/>
       
+      <BusinessHours language={lang} />
+
+      <button id='darkButton' onClick={() => setDarkMode(!darkMode)}>{ darkMode ? "🌙" : "☀️"}</button>
+
       <Piece 
         Big={lang === "ar" ? "من نحن" : "Who we are"}
         Medium={lang === "ar" ? "​نحن مكتب ترجمة معتمد متخصص في تقديم الحلول اللغوية المتكاملة.\n\n نجمع بين الخبرة القانونية والاحترافية اللغوية لضمان قبول مستنداتكم لدى كافة الجهات الحكومية، السفارات، والشركات الدولية.\n\n نحن لا نترجم الكلمات فحسب، بل ننقل المعنى القانوني والتقني بكل أمانة.": "We are a certified translation office specializing in providing integrated language solutions. \n\nWe combine legal expertise and linguistic professionalism to ensure your documents are accepted by all government agencies, embassies, and international companies. \n\nWe don't just translate words; we convey the legal and technical meaning with complete fidelity."}
