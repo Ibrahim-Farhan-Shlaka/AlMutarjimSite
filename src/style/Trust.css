@@ -13,7 +13,7 @@
 .trust-card h2 {
   font-size: 2rem;
   font-weight: 800;
-  color: var(--secondary-text-color);
+  color: var(--accent);
   margin-bottom: 1.2rem;
 }
 
@@ -36,6 +36,10 @@
   font-weight: 600;
   font-size: 0.75rem;
   transition: 0.25s ease;
+}
+
+.trust-item p {
+  color: var(--accent);
 }
 
 .trust-item:hover {

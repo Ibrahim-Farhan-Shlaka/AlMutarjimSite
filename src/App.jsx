@@ -8,12 +8,12 @@ import Shop from './Shop'
 import Piece from './Piece'
 import SlideShow from './Slideshow'
 import List from "./List"
-import WhatsAppButton from "./WhatsappButton"
 import Contact from "./contact"
 import LangButton from "./LangButton";
 import BusinessHours from './BusinessHours'
 import MobileCTA from './MobileCTA'
 import Trust from './Trust'
+import ServicesList from './ServicesList'
 
 function App() {
 
@@ -105,6 +105,38 @@ function App() {
     "ترجمة عقود التأسيس للشركات"
   ]
 
+  const servicesData = [
+    {
+      title: "Certificates",
+      items: [
+        { name: "Birth Certificate", image: "/docs/birth.jpg" },
+        { name: "Marriage Certificate", image: "/docs/marriage.jpg" },
+        { name: "Academic Certificate", image: "/docs/academic.jpg" },
+      ]
+    },
+    {
+      title: "Legal Documents",
+      items: [
+        { name: "Contracts", image: "/docs/contract.jpg" },
+        { name: "Court Documents", image: "/docs/court.jpg" },
+      ]
+    },
+    {
+      title: "Commercial Documents",
+      items: [
+        { name: "Invoices", image: "/docs/invoice.jpg" },
+        { name: "Company Registration", image: "/docs/company.jpg" },
+      ]
+    },
+    {
+      title: "Medical Documents",
+      items: [
+        { name: "Medical Reports", image: "/docs/medical.jpg" },
+      ]
+    }
+  ]
+
+
   return (
     <div className='App' data-theme={darkMode ? 'dark' : 'light'} >
       
@@ -143,7 +175,9 @@ function App() {
         lang={lang}
       />
 
+      {/*<List Header={lang === "ar" ? "خدماتنا" : "Our services"} languages={lang === "ar" ? ARservices : Services} lang={lang}/>*/}
       <List Header={lang === "ar" ? "خدماتنا" : "Our services"} languages={lang === "ar" ? ARservices : Services} lang={lang}/>
+      {/*<ServicesList Header="Our Translation Services" data={servicesData}></ServicesList>*/}
 
       <Contact lang={lang}></Contact>
 

@@ -21,6 +21,7 @@
   --pattern-color: #00000012;
   --toggle-bg: #f0eb9d;
   --toggle-fg: #474303;
+  --accent: #009dff;
 }
 
 * {
@@ -35,6 +36,7 @@
   --pattern-color: #ffffff2d;
   --toggle-bg: #f0eb9d;
   --toggle-fg: #474303;
+  --accent: #2200ff;
 }
 
 [data-theme='dark'] {
@@ -45,6 +47,7 @@
   --pattern-color: #ffffff12;
   --toggle-bg: #334cdb;
   --toggle-fg: #12106e;
+  --accent: #009dff;
 }
 
 body {

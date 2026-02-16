@@ -54,9 +54,10 @@
 /* Buttons */
 .hero-buttons {
   display: flex;
-  gap: 1.2rem;
+  gap: 1rem;
   justify-content: center;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
+  font-size: x-small;
 }
 
 .hero-btn {
