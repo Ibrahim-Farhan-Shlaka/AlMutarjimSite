@@ -2,6 +2,8 @@ import { useState } from 'react'
 
 import './style/index.css'
 
+import { reportCallConversion } from "../utils/gtag";
+
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Shop from './Shop'

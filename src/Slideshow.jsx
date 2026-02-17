@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import "./style/Slideshow.css"
-
+import { reportCallConversion } from "../utils/gtag";
 const images = ["main.jpg", "9Copy.jpg", "7Copy.jpg"]
 
 const Slideshow = ({ lang }) => {
@@ -28,11 +28,12 @@ const Slideshow = ({ lang }) => {
               href="https://wa.me/9647703599943?text=اتصل بالمترجم"
               target="_blank"
               className="hero-btn whatsapp"
+              onClick={(e) => {reportCallConversion("https://wa.me/9647703599943?text=اتصل بالمترجم");}}
             >
               {lang === "ar" ? "💬+9647703599943 أرسل مستند عبر واتساب" : "Send documents via whatsapp +9647703599943💬"}
             </a>
 
-            <a href="tel:+9647703599943" className="hero-btn call">
+            <a href="tel:+9647703599943" className="hero-btn call" onClick={() => reportCallConversion()}>
               {lang === "ar" ? "📞 اتصل بالمترجم" : "Call us 📞"}
             </a>
             
