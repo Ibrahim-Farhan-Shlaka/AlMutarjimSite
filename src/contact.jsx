@@ -1,7 +1,7 @@
 import React from "react"
 import { Mail, Phone, MapPin, Instagram, Facebook, MessageCircle } from "lucide-react"
 import "./style/contact.css"
-import { reportCallConversion } from "../utils/gtag";
+import { gtag_report_conversion } from "../utils/gtag.js";
 
 const Contact = ({ lang }) => {
   return (
@@ -20,14 +20,14 @@ const Contact = ({ lang }) => {
         </a>
 
         {/* PHONE */}
-        <a href="tel:+9647703599943" className="contact-item" onClick={() => reportCallConversion()}>
+        <a href="tel:+9647703599943" className="contact-item" onClick={() => gtag_report_conversion()}>
             <Phone size={40} strokeWidth={1.5} className="pic"/>
             <span>Phone</span>
             <p>+964 770 359 9943</p>
             <p>+964 790 172 3025</p>
         </a>
 
-        <a href="https://wa.me/9647703599943"  target="_blank" className="contact-item" onClick={(e) => {reportCallConversion("https://wa.me/9647703599943");}}>
+        <a href="https://wa.me/9647703599943"  target="_blank" className="contact-item" onClick={(e) => {gtag_report_conversion("https://wa.me/9647703599943");}}>
         <MessageCircle size={40} strokeWidth={1.5} className="pic"/>
         <span>WhatsApp</span>
         <p>+9647703599943 تواصل معنا</p>

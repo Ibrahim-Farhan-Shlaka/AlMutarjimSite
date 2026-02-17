@@ -1,7 +1,7 @@
 import React from "react"
 import { FaPhoneAlt, FaWhatsapp, FaMap } from "react-icons/fa"
 import "./style/MobileCTA.css"
-import { reportCallConversion } from "../utils/gtag";
+import { gtag_report_conversion } from "../utils/gtag.js";
 
 const MobileCTA = ({ lang }) => {
   const t = {
@@ -12,7 +12,7 @@ const MobileCTA = ({ lang }) => {
 
   return (
     <div className="mobile-cta">
-      <a className="cta-call" href="tel:+9647703599943" onClick={(e) => {reportCallConversion();}}>
+      <a className="cta-call" href="tel:+9647703599943" onClick={(e) => {gtag_report_conversion();}}>
         <FaPhoneAlt />
         {/*{t.call}*/}
       </a>
@@ -27,7 +27,7 @@ const MobileCTA = ({ lang }) => {
         href="https://wa.me/9647703599943"
         target="_blank"
         rel="noopener noreferrer"
-        onClick={(e) => {reportCallConversion("https://wa.me/9647703599943");}}
+        onClick={(e) => {gtag_report_conversion("https://wa.me/9647703599943");}}
       >
         <FaWhatsapp />
         {/*{t.whatsapp}*/}

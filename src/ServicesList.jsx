@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { FaChevronDown, FaChevronUp } from "react-icons/fa"
 import "./style/ServicesList.css"
-import { reportCallConversion } from "../utils/gtag";
+import { gtag_report_conversion } from "../utils/gtag.js";
 
 const ServicesList = ({ Header, data, lang }) => {
 
@@ -55,7 +55,7 @@ const ServicesList = ({ Header, data, lang }) => {
                         )}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        onClick={(e) => {reportCallConversion("https://wa.me/9647703599943?text=اتصل بالمترجم");}}
+                        onClick={(e) => {gtag_report_conversion("https://wa.me/9647703599943?text=اتصل بالمترجم");}}
                       >
                         {lang === "ar" ? "📩 أرسل للترجمة" : "📩 Send for Translation"}
                       </a>
