@@ -1,7 +1,7 @@
 import React from "react"
 import { Mail, Phone, MapPin, Instagram, Facebook, MessageCircle } from "lucide-react"
 import "./style/contact.css"
-import { gtag_report_conversion } from "../utils/gtag";
+import { gtag_report_conversion } from "../utils/gtag.js";
 
 const Contact = ({ lang }) => {
   return (
