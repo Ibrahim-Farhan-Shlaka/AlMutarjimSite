@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import "./style/Slideshow.css"
-import { gtag_report_conversion } from "../utils/gtag";
+import { gtag_report_conversion } from "../utils/gtag.js";
 
 const images = ["main.jpg", "9Copy.jpg", "7Copy.jpg"]
 
