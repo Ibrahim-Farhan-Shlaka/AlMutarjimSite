@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { FaChevronDown, FaChevronUp } from "react-icons/fa"
 import "./style/ServicesList.css"
-import { gtag_report_conversion } from "../utils/gtag.js";
+import { gtag_report_conversion } from "./src/utils/gtag.js";
 
 const ServicesList = ({ Header, data, lang }) => {
 

@@ -1,7 +1,7 @@
 import React from "react"
 import { FaPhoneAlt, FaWhatsapp, FaMap } from "react-icons/fa"
 import "./style/MobileCTA.css"
-import { gtag_report_conversion } from "../utils/gtag";
+import { gtag_report_conversion } from "./src/utils/gtag.js";
 
 const MobileCTA = ({ lang }) => {
   const t = {
