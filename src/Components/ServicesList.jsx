@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { FaChevronDown, FaChevronUp } from "react-icons/fa"
-import "./style/ServicesList.css"
+import "../style/ServicesList.css"
 
 function gtag_report_conversion(url) {
   var callback = function () {

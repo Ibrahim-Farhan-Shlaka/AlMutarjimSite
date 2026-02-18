@@ -19,12 +19,8 @@ function App() {
 
   const [darkMode, setDarkMode] = useState(false);
   const [buttonText, setButtonText] = useState("☀️");
-
   const [lang, setLang] = useState("ar");
-
-  const toggleLang = () => {
-    setLang(prev => (prev === "ar" ? "en" : "ar"));
-  };
+  const toggleLang = () => {setLang(prev => (prev === "ar" ? "en" : "ar"));};
 
   const languages = [
     "Arabic",

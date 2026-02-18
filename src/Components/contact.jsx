@@ -1,6 +1,6 @@
 import React from "react"
 import { Mail, Phone, MapPin, Instagram, Facebook, MessageCircle } from "lucide-react"
-import "./style/contact.css"
+import "../style/contact.css"
 
 function gtag_report_conversion(url) {
   var callback = function () {

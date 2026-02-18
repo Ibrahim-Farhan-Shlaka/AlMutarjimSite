@@ -164,16 +164,8 @@ function App() {
       
       <Navbar language={lang} toggleLang={toggleLang}></Navbar>
       
-      <SlideShow lang={lang}></SlideShow>
-      
       <Trust lang={lang}></Trust>
       
-      <ServicesList Header={lang === "ar" ? "خدماتنا الأساسية" : "Our translation Services"} data={servicesData} lang={lang}></ServicesList>
-
-      <List Header={lang === "ar" ? "اللغات":"Languages"} languages={lang === "ar" ? ARlanguages : languages} lang={lang}/>
-      
-      <BusinessHours language={lang} />
-
       <button id='darkButton' onClick={() => setDarkMode(!darkMode)}>{ darkMode ? "🌙" : "☀️"}</button>
 
       <Piece 
@@ -198,8 +190,6 @@ function App() {
         align='right'
         lang={lang}
       />
-
-      {/*<List Header={lang === "ar" ? "خدماتنا" : "Our services"} languages={lang === "ar" ? ARservices : Services} lang={lang}/>*/}
 
       <Contact lang={lang}></Contact>
 

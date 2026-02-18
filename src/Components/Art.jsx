@@ -1,6 +1,6 @@
 import React from 'react'
 import Artist from './Artist'
-import './style/Art.css'
+import '../style/Art.css'
 
 const Art = () => {
   return (

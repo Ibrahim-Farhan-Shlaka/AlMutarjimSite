@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import "./style/BusinessHours.css"
+import "../style/BusinessHours.css"
 
 const schedule = {
   Saturday: { open: 8, close: 21 },

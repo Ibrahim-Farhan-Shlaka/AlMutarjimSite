@@ -1,6 +1,6 @@
 import React from "react"
 import { FaPhoneAlt, FaWhatsapp, FaMap } from "react-icons/fa"
-import "./style/MobileCTA.css"
+import "../style/MobileCTA.css"
 
 function gtag_report_conversion(url) {
   var callback = function () {

@@ -1,5 +1,5 @@
 import React from "react"
-import "./style/WhatsappButton.css"
+import "../style/WhatsappButton.css"
 
 const WhatsappButton = () => {
   return (

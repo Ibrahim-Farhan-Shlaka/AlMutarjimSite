@@ -1,5 +1,5 @@
 import React from 'react'
-import './style/Piece.css'
+import '../style/Piece.css'
 
 const Piece = ({ Big, Medium, ImagePath, align = "left" }) => {
   return (

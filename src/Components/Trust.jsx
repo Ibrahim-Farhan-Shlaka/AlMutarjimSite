@@ -1,6 +1,6 @@
 import React from "react"
 import { ShieldCheck, FileCheck, Stamp, Lock } from "lucide-react"
-import "./style/Trust.css"
+import "../style/Trust.css"
 
 const Trust = ({ lang }) => {
 

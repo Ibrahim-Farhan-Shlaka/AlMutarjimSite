@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import "./style/Slideshow.css"
+import "../style/Slideshow.css"
 
 function gtag_report_conversion(url) {
   var callback = function () {

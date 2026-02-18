@@ -1,5 +1,5 @@
 import React from "react";
-import "./style/LangButton.css";
+import "../style/LangButton.css";
 
 const LangButton = ({ lang, toggleLang }) => {
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import "./style/Navbar.css"
+import "../style/Navbar.css"
 import LangButton from "./LangButton"
 
 const Navbar = ({ lang, toggleLang }) => {
