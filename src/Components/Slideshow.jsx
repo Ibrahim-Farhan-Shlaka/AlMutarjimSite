@@ -36,7 +36,7 @@ const Slideshow = ({ lang }) => {
       <div className="hero-text">
         <h1>{lang === "ar" ? "مرحبًا بكم في مكتب المترجم" : "Welcome to Al Mutarjim Office"}</h1>
         <h2>{lang === "ar" ? "للترجمة القانونية المعتمدة" : "Legal & Authorized Translation"}</h2>
-        <p>{lang === "ar" ? "مترجمين محترفين ومرخصين" : "Professional certified translators"}</p>
+        <p>{lang === "ar" ? "نحن مكتب ترجمة معتمد نقدم ترجمة قانونية لجميع الوثائق الرسمية مثل الشهادات والعقود والتقارير الطبية." : "Professional certified translators"}</p>
         
       <div className="hero-buttons">
             <a
