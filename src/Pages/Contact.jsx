@@ -1,21 +1,14 @@
 import { useState } from 'react'
 
-import './style/index.css'
+import '../style/index.css'
 
-import Navbar from './Components/Navbar'
-import Footer from './Components/Footer'
-import Shop from './Components/Shop'
-import Piece from './Components/Piece'
-import SlideShow from './Components/Slideshow'
-import List from "./Components/List"
-import Contact from "./Components/contact"
-import LangButton from "./Components/LangButton";
-import BusinessHours from './Components/BusinessHours'
-import MobileCTA from './Components/MobileCTA'
-import Trust from './Components/Trust'
-import ServicesList from './Components/ServicesList'
+import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer'
+import Shop from '../Components/Shop'
+import contactSection from "../Components/contactSection"
+import MobileCTA from '../Components/MobileCTA'
 
-function App() {
+export function Contact() {
 
   const [darkMode, setDarkMode] = useState(false);
   const [buttonText, setButtonText] = useState("☀️");
@@ -177,5 +170,3 @@ function App() {
     </div>
   )
 }
-
-export default App
