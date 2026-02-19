@@ -28,14 +28,12 @@ const MobileCTA = ({ lang }) => {
     <div className="mobile-cta">
       <a className="cta-call" href="tel:+9647703599943" onClick={(e) => {gtag_report_conversion();}}>
         <FaPhoneAlt />
-        {/*{t.call}*/}
       </a>
 
       <a className="cta-review" href="https://maps.app.goo.gl/vEkaRWEMKq6uAMsF8">
         <FaMap/>
-        {/*{t.review}*/}
       </a>
-
+      {/*
       <a
         className="cta-whatsapp"
         href="https://wa.me/9647703599943"
@@ -44,8 +42,8 @@ const MobileCTA = ({ lang }) => {
         onClick={(e) => {gtag_report_conversion("https://wa.me/9647703599943");}}
       >
         <FaWhatsapp />
-        {/*{t.whatsapp}*/}
       </a>
+      */}
     </div>
   )
 }

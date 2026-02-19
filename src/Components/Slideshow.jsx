@@ -45,7 +45,7 @@ const Slideshow = ({ lang }) => {
               className="hero-btn whatsapp"
               onClick={(e) => {gtag_report_conversion("https://wa.me/9647703599943?text=اتصل بالمترجم");}}
             >
-              {lang === "ar" ? "💬+9647703599943 أرسل مستند عبر واتساب" : "Send documents via whatsapp +9647703599943💬"}
+              {lang === "ar" ? "💬+9647703599943 احصل على تقييم مجاني لمستنداتك الآن" : "Send documents via whatsapp +9647703599943💬"}
             </a>
 
             <a href="tel:+9647703599943" className="hero-btn call" onClick={() => gtag_report_conversion()}>

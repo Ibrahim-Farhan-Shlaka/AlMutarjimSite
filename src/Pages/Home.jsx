@@ -14,11 +14,11 @@ import BusinessHours from '../Components/BusinessHours'
 import MobileCTA from '../Components/MobileCTA'
 import Trust from '../Components/Trust'
 import ServicesList from '../Components/ServicesList'
+import WhatsappButton from '../Components/WhatsappButton'
 
 export function Home() {
 
   const [darkMode, setDarkMode] = useState(false);
-  const [buttonText, setButtonText] = useState("☀️");
   const [lang, setLang] = useState("ar");
   const toggleLang = () => {setLang(prev => (prev === "ar" ? "en" : "ar"));};
 
@@ -196,6 +196,8 @@ export function Home() {
       {/*<List Header={lang === "ar" ? "خدماتنا" : "Our services"} languages={lang === "ar" ? ARservices : Services} lang={lang}/>*/}
 
       <Contact lang={lang}></Contact>
+      
+      <WhatsappButton></WhatsappButton>
 
       <Shop Name={lang === "ar" ? "موقعنا" : "Location"}/>
 
