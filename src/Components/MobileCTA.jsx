@@ -2,20 +2,33 @@ import React from "react"
 import { FaPhoneAlt, FaWhatsapp, FaMap } from "react-icons/fa"
 import "../style/MobileCTA.css"
 
+
 function gtag_report_conversion(url) {
+  console.log("🔥 Conversion button clicked");
+
   var callback = function () {
-    if (typeof(url) != 'undefined') {
+    console.log("✅ Conversion callback fired");
+    if (typeof url !== "undefined") {
       window.location = url;
     }
   };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17938224109/uTUXCIXUrfobEO2nzulC',
-      'value': 1.0,
-      'currency': 'TRY',
-      'event_callback': callback
-  });
+
+  if (window.gtag) {
+    window.gtag('event', 'conversion', {
+      send_to: 'AW-17938224109/uTUXCIXUrfobEO2nzulC',
+      value: 1.0,
+      currency: 'TRY',
+      event_callback: callback
+    });
+
+    console.log("📡 gtag conversion sent to Google");
+  } else {
+    console.log("❌ gtag NOT loaded");
+  }
+
   return false;
 }
+
 
 const MobileCTA = ({ lang }) => {
   const t = {

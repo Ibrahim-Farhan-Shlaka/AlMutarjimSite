@@ -1,20 +1,33 @@
 import React, { useState, useEffect } from "react"
 import "../style/Slideshow.css"
 
+
 function gtag_report_conversion(url) {
+  console.log("🔥 Conversion button clicked");
+
   var callback = function () {
-    if (typeof(url) != 'undefined') {
+    console.log("✅ Conversion callback fired");
+    if (typeof url !== "undefined") {
       window.location = url;
     }
   };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17938224109/uTUXCIXUrfobEO2nzulC',
-      'value': 1.0,
-      'currency': 'TRY',
-      'event_callback': callback
-  });
+
+  if (window.gtag) {
+    window.gtag('event', 'conversion', {
+      send_to: 'AW-17938224109/uTUXCIXUrfobEO2nzulC',
+      value: 1.0,
+      currency: 'TRY',
+      event_callback: callback
+    });
+
+    console.log("📡 gtag conversion sent to Google");
+  } else {
+    console.log("❌ gtag NOT loaded");
+  }
+
   return false;
 }
+
 
 const images = ["main.jpg", "9Copy.jpg", "7Copy.jpg"]
 
@@ -48,7 +61,7 @@ const Slideshow = ({ lang }) => {
               {lang === "ar" ? "💬+9647703599943 احصل على تقييم مجاني لمستنداتك الآن" : "Send documents via whatsapp +9647703599943💬"}
             </a>
 
-            <a href="tel:+9647703599943" className="hero-btn call" onClick={() => gtag_report_conversion()}>
+            <a href="tel:+9647703599943" className="hero-btn call" onClick={(e) => gtag_report_conversion()}>
               {lang === "ar" ? "📞 اتصل بالمترجم" : "Call us 📞"}
             </a>
             
