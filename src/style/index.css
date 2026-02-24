@@ -152,7 +152,8 @@ button:focus, button:focus-visible {
   position: fixed;
   top: 5rem;
   right: 0.5rem;
-  z-index: 9999;
+  margin-right: 48.5%;
+  z-index: 100;
   font-weight: bold;
   padding: 1rem;
   border: var(--foreground-color) 2px solid;
@@ -215,5 +216,13 @@ button:focus, button:focus-visible {
     top: -0.8rem;
     right: -1rem;
     padding: 0.5rem;
+  }
+}
+
+@media (min-width: 700px) {
+  #darkButton {
+    top: 5rem;
+    right: -56rem;
+    padding: 1rem;
   }
 }

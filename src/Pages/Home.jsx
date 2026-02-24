@@ -9,7 +9,7 @@ import Shop from '../Components/Shop'
 import Piece from '../Components/Piece'
 import SlideShow from '../Components/Slideshow'
 import List from "../Components/List"
-import Contact from "../Components/contactSection"
+import Contact from "../Components/Contact"
 import BusinessHours from '../Components/BusinessHours'
 import MobileCTA from '../Components/MobileCTA'
 import Trust from '../Components/Trust'
@@ -208,3 +208,5 @@ export function Home() {
     </div>
   )
 }
+
+export default Home

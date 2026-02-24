@@ -28,7 +28,7 @@ function gtag_report_conversion(url) {
   return false;
 }
 
-const contactSection = ({ lang }) => {
+const Contact = ({ lang }) => {
   return (
     <section className="contact-card" dir="ltr">
 
@@ -91,4 +91,4 @@ const contactSection = ({ lang }) => {
   )
 }
 
-export default contactSection
+export default Contact
